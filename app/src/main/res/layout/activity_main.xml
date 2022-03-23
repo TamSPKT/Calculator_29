@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <!--
+    - Hiện thị text lên màn hình calculator
+    - Đăng Tâm
+    - 2022-09-03 20:18
+    -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#464646"
+        android:fontFamily="sans-serif-thin"
+        android:text="123456"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 7
+    - Đăng Tâm
+    - 2022-09-03 20:20
+    -->
+    <Button
+        android:id="@+id/button_num7"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="7"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num4"
+        app:layout_constraintEnd_toStartOf="@id/button_num8"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 8
+    - Đăng Tâm
+    - 2022-09-03 20:21
+    -->
+    <Button
+        android:id="@+id/button_num8"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="8"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num5"
+        app:layout_constraintEnd_toStartOf="@+id/button_num9"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num7"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 9
+    - Đăng Tâm
+    - 2022-09-03 20:22
+    -->
+    <Button
+        android:id="@+id/button_num9"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="9"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num6"
+        app:layout_constraintEnd_toStartOf="@+id/button_div"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num8"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <!--
+    - Button dấu chia (Unicode "\u00F7")
+    - Đăng Tâm
+    - 2022-09-03 20:22
+    -->
+    <Button
+        android:id="@+id/button_div"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="\u00F7"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@id/button_mul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num9"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <!--
+    - Button dấu nhân (Unicode "\u00D7")
+    - Đăng Tâm
+    - 2022-09-03 20:23
+    -->
+    <Button
+        android:id="@+id/button_mul"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="\u00D7"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@id/button_sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num6"
+        app:layout_constraintTop_toBottomOf="@+id/button_div" />
+
+    <!--
+    - Button dấu trừ
+    - Đăng Tâm
+    - 2022-09-03 20:23
+    -->
+    <Button
+        android:id="@+id/button_sub"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num3"
+        app:layout_constraintTop_toBottomOf="@+id/button_mul" />
+
+    <!--
+    - Button số 6
+    - Đăng Tâm
+    - 2022-09-03 20:23
+    -->
+    <Button
+        android:id="@+id/button_num6"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="6"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num3"
+        app:layout_constraintEnd_toStartOf="@+id/button_mul"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num5"
+        app:layout_constraintTop_toBottomOf="@+id/button_num9" />
+
+    <!--
+    - Button số 3
+    - Đăng Tâm
+    - 2022-09-03 20:23
+    -->
+    <Button
+        android:id="@+id/button_num3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_dot"
+        app:layout_constraintEnd_toStartOf="@+id/button_sub"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num2"
+        app:layout_constraintTop_toBottomOf="@+id/button_num6" />
+
+    <!--
+    - Button số 5
+    - Đăng Tâm
+    - 2022-09-03 20:24
+    -->
+    <Button
+        android:id="@+id/button_num5"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num2"
+        app:layout_constraintEnd_toStartOf="@+id/button_num6"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num4"
+        app:layout_constraintTop_toBottomOf="@+id/button_num8"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 2
+    - Đăng Tâm
+    - 2022-09-03 20:24
+    -->
+    <Button
+        android:id="@+id/button_num2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="2"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_num0"
+        app:layout_constraintEnd_toStartOf="@+id/button_num3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num1"
+        app:layout_constraintTop_toBottomOf="@+id/button_num5"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 4
+    - Đăng Tâm
+    - 2022-09-03 20:24
+    -->
+    <Button
+        android:id="@+id/button_num4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="4"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num1"
+        app:layout_constraintEnd_toStartOf="@+id/button_num5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num7"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 1
+    - Đăng Tâm
+    - 2022-09-03 20:24
+    -->
+    <Button
+        android:id="@+id/button_num1"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@id/button_num0"
+        app:layout_constraintEnd_toStartOf="@+id/button_num2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num4"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button số 0
+    - Đăng Tâm
+    - 2022-09-03 20:24
+    -->
+    <Button
+        android:id="@+id/button_num0"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_clear"
+        app:layout_constraintEnd_toStartOf="@+id/button_dot"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num1"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button xoá (Clear)
+    - Đăng Tâm
+    - 2022-09-03 20:25
+    -->
+    <Button
+        android:id="@+id/button_clear"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="C"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_equal"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_num0"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--
+    - Button dấu bằng
+    - Đăng Tâm
+    - 2022-09-03 20:25
+    -->
+    <Button
+        android:id="@+id/button_equal"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="="
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/button_clear"
+        app:layout_constraintTop_toBottomOf="@+id/button_num0" />
+
+    <!--
+    - Button dấu chấm (Unicode "\u00B7")
+    - Đăng Tâm
+    - 2022-09-03 20:27
+    -->
+    <Button
+        android:id="@+id/button_dot"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/number_background"
+        android:fontFamily="sans-serif-light"
+        android:text="\u00B7"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_equal"
+        app:layout_constraintEnd_toStartOf="@+id/button_add"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_num0"
+        app:layout_constraintTop_toBottomOf="@+id/button_num3" />
+
+    <!--
+    - Button dấu cộng
+    - Đăng Tâm
+    - 2022-09-03 20:28
+    -->
+    <Button
+        android:id="@+id/button_add"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/operator_background"
+        android:fontFamily="sans-serif-light"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_equal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button_dot"
+        app:layout_constraintTop_toBottomOf="@+id/button_sub" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
