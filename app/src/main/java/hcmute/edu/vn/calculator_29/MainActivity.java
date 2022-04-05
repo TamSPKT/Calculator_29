@@ -80,28 +80,90 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick(@NonNull View v) {
         int id = v.getId();
+        String s = textView.getText().toString();
+        Double t;
         if (id == R.id.button_num0) {
-            textView.append("0");
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t != 0) {
+                    textView.append("0");
+                }
+            } else {
+                textView.append("0");
+            }
         } else if (id == R.id.button_num1) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("1");
         } else if (id == R.id.button_num2) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("2");
         } else if (id == R.id.button_num3) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("3");
         } else if (id == R.id.button_num4) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("4");
         } else if (id == R.id.button_num5) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("5");
         } else if (id == R.id.button_num6) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("6");
         } else if (id == R.id.button_num7) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("7");
         } else if (id == R.id.button_num8) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("8");
         } else if (id == R.id.button_num9) {
+            if (!s.isEmpty()) {
+                t = Double.parseDouble(s);
+                if (t == 0 && !s.contains(".")) {
+                    textView.setText("");
+                }
+            }
             textView.append("9");
         } else if (id == R.id.button_dot) {
-            String s = textView.getText().toString();
             if (s.isEmpty()) {
                 textView.append("0.");
             } else if (!s.contains(".")) {
